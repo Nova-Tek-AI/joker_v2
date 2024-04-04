@@ -4,6 +4,7 @@ from datetime import datetime
 
 @tool()
 def say_hi_in_italian(txt: str) -> str:
+    # this is for the AI Agent to understand the it needs to use this tool under a certain situation
     """Use this tool when you understand the user is saying hi and say hi back in italian"""
 
     greetings_type_list = ["ciao", "salve", "buongiorno", "buondi", "buonasera"]
