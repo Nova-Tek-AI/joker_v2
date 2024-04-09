@@ -65,7 +65,9 @@ async def ask_assistant(input: str) -> str | tuple:
         try:
             with get_openai_callback() as cb:
                 print(f"Calling model: {model} for {time} seconds")
+                # agent_executor here is what contains the AI Virtual Assistant or Agent
                 agent_executor = create_agent_executor(model, time)
+                # call the agent executor with the user input
                 resp = await agent_executor.ainvoke({"input": input})
                 output = resp["output"]
 
