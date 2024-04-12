@@ -7,9 +7,9 @@ from src.services.llm.agent import ask_assistant
 
 router = APIRouter(tags=["assistant"])
 
+
 @router.post("/assistant-message", status_code=status.HTTP_200_OK)
 async def ask(obj_in: UserMessageInSchema):
     """Ask assistant"""
     resp = await ask_assistant(obj_in.message)
     return resp
-

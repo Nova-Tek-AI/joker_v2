@@ -18,6 +18,7 @@ async def ask_assistant(input: str) -> str | tuple:
     prompt = PromptTemplate.from_template(prompt_raw)
 
     prompt = prompt.partial(
+        language="Spanish",
         tools=render_text_description(tools),
         tool_names=", ".join([t.name for t in tools]),
     )

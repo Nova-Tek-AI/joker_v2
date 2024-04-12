@@ -5,8 +5,8 @@ from src.schemas.book import CreateBook
 
 
 # example of a class in Python
-class Cat():
-    name:str
+class Cat:
+    name: str
     length: float
     weight: float
 
@@ -15,6 +15,7 @@ class Cat():
         self.length = length
         self.weight = weight
 
+
 # we create an entity of Cat class called eve
 eve = Cat(name="eve", length=12.3, weight=2.3)
 
@@ -22,6 +23,7 @@ eve = Cat(name="eve", length=12.3, weight=2.3)
 router = APIRouter(tags=["books"])
 
 books = []
+
 
 @router.post("/hello-books")
 async def hello_books():

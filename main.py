@@ -20,10 +20,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 # health check route
 @app.get("/")
 def hello_world():
     return "This is the Joker!"
+
 
 # including all the routers
 app.include_router(assistant_router)
