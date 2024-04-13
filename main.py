@@ -1,11 +1,12 @@
 from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.api.assistant import router as assistant_router
 from src.api.book import router as book_router
 
-load_dotenv()
 
 # app that we are creating
 app = FastAPI()
